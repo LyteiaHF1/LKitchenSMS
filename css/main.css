@@ -17,10 +17,11 @@ Nav Text Hover Gold: #bea322
 ? Header
 ? Header Icons
 ? Main Content
-? Banner 
+? Banner
+? Video Styles 
 ? Footer
 ? Fixes
-? Fonts
+
 
 ----------------------------------------------------------------------------------------------------*/
 
@@ -346,145 +347,6 @@ section#banner{
 		? Video Styles
 ---------------------------------------------------------------------------------------------------*/
 
-div#video_container {
-        width: 840px;
-        margin: 25px auto 0;
-}
-
-#prev_video {
-        float: left;
-        margin: 220px 25px 0;
-}
-
-div#pretend_video {
-        float: left;
-        width: 640px;
-        height: 380px;
-        /*padding-bottom: 20px;*/
-        float: left;
-        padding-right: 10px;
-}
-
-div#video_controls {
-        float: left;
-        width: 100%;
-        height: 28px;
-        background: black;
-        overflow: hidden;
-}
-
-div#seek_bar {
-        height: 12px;
-        float: left;
-        margin-bottom: 3px;
-        background: url(../images/scrubber_bg.gif) repeat;
-        width: 640px;
-        position: relative;
-        left: 0;
-}
-
-div#seek_bar #scrubber {
-        position: absolute;
-}
-
-div#video_controls a, img, p {
-        float: left;
-}
-
-div#video_controls #playandpause {
-        width: 10px;
-        margin: 5px 0 0 10px;
-}
-
-div#video_controls p {
-        color: white;
-        font: 16px 'Helvetica Neue';
-        margin: 5px 0 0 10px;
-}
-
-div#video_controls p#duration {
-        margin: 5px 0 0 3px;
-}
-
-div#video_controls p:nth-child(5) {
-        margin: 5px 0 0 0;
-}
-
-div#video_controls #record {
-        margin-left: 280px;
-}
-
-div#video_controls #audio_sources {
-        margin: 5px 3px 0 150px;
-}
-
-div#sources_container {
-        position: relative;
-        background: black;
-        padding-top: 5px;
-        height: 30px;
-        float: left;
-        width: 100%;
-        display: none;
-}
-
-div#sources_container ul {
-        left: 20px;
-        position: absolute;
-        color: white;
-        font: 16px Arial;
-}
-
-div#sources_container ul li {
-        float: left;
-        padding: 0 5px;
-}
-
-div#sources_container ul li a {
-        color: white;
-}
-
-div#video_controls #seperator {
-        margin: 5px 0 0 0px;
-}
-
-div#video_controls #video_sources {
-        margin: 5px 0 0 3px;
-}
-
-div#volume_bar > img:first-child {
-        margin: 5px 4px 0 20px;
-}
-
-div#volume_bar {
-        float: left;
-        margin-top: 3px;
-}
-
-div#volume {
-        float: left;
-        background: #00f6ff;
-        height: 8px;
-        margin-top: 8px;
-        overflow: hidden;
-        position: relative;
-        width: 100px;
-}
-
-div#volume img {
-        position: absolute;
-        top: -2px;
-        left: -1px;
-}
-
-div#volume_bar img:nth-child(3) {
-        margin: 5px 0 0 5px;
-}
-
-#next_video {
-        float: left;
-        margin: 220px 25px 0;
-}		
 
 
 /* ---------------------------------------------------------------------------------------------------
@@ -535,11 +397,7 @@ h2{
 
 }
 
-footer #howard{
-	float: right;
-	padding-right: 60px;
-	width: 40%;
-}
+
 
 
 /* ---------------------------------------------------------------------------------------------------
@@ -551,39 +409,4 @@ a img { border: 0; }
 img { max-width: 100%; }
 
 .clear_fix { clear: both; }
-
-/* ---------------------------------------------------------------------------------------------------
-		? Fonts
----------------------------------------------------------------------------------------------------*/
-
-
-/* @license
- * MyFonts Webfont Build ID 2642683, 2013-09-13T00:59:23-0400
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: Festivo Letters No.1 by Ahmet Altun
- * URL: http://www.myfonts.com/fonts/ahmet-altun/festivo-letters/no-1/
- * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
- * Licensed pageviews: 500,000
- * 
- * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2642683
- * 
- * © 2013 MyFonts Inc
-*/
-
-@import url("//hello.myfonts.net/count/2852fb");
-@font-face {font-family: 'FestivoLettersNo1';src: url('../fonts/festivoOne/2852FB_0_0.eot');src: url('../fonts/festivoOne/2852FB_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/festivoOne/2852FB_0_0.woff') format('woff'),url('../fonts/festivoOne/2852FB_0_0.ttf') format('truetype');}
-
-@import url("//hello.myfonts.net/count/2855ff"); 
-@font-face {font-family: 'FestivoLettersNo18';src: url('../fonts/festivoEighteen/2855FF_0_0.eot');src: url('../fonts/festivoEighteen/2855FF_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/festivoEighteen/2855FF_0_0.woff') format('woff'),url('../fonts/festivoEighteen/2855FF_0_0.ttf') format('truetype');}
- 
-@import url("//hello.myfonts.net/count/285752");
-@font-face {font-family: 'FestivoLettersNo7';src: url('../fonts/festivoSeven/285752_0_0.eot');src: url('../fonts/festivoSeven/285752_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/festivoSeven/285752_0_0.woff') format('woff'),url('../fonts/festivoSeven/285752_0_0.ttf') format('truetype');}
- 
 
