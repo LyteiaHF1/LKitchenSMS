@@ -1,24 +1,114 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title></title>
+        <title>Heavy R </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <link rel="stylesheet" href="css/main1.css" />
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <script type="text/javascript" src="js/demo.js"></script>
         <script type="text/javascript" src="js/swfobject.js"></script>
         <script type="text/javascript" src="js/sms_setup.js"></script>
+        
+        <!-- Slider JS -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/easySlider1.7.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){	
+				$("#slider").easySlider({
+					auto: true, 
+					continuous: true
+				});
+			});	
+		</script>
+        
  </head>
  <body>
-    <div style="width: 640px; height: 480px;">
-        <div id="flashContent">
-            <script type="text/javascript">
-                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
-                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
-            </script>
-        </div>
-    </div>
+         <div id="wrapper">
 
-   </body>
+			<header>
+				<div id="header_top"></div>
+				<div id="header_bottom"></div>
+				<div id="header_texture"></div>
+				<div id="header_nav" class="container">
+					<div id="logo">
+						<a href="#"><img src="images/logo.png"></a>
+						<div id="logo_text"><a href="#">TGFC</a></div>
+					</div> <!-- end logo -->
+					<nav>
+						<ul>
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#" id="fb_login">SIGN IN</a></li>
+						</ul>
+						<ul id="icons">
+							<li><a id="facebook" href="https://www.facebook.com/HighfashionCarter">Facebook</a></li>
+							<li><a id="youtube" href="http://www.youtube.com/user/HighfasionLyte">Youtube</a></li>
+							<li><a id="tumblr" href="">Tumblr</a></li>
+							<li><a id="twitter" href="https://twitter.com/MRZDOLLAZ90">Twitter</a></li>
+							<li><a id="insta" href="http://instagram.com/_soleaddict_/#">Instagram</a></li>
+						</ul>	
+					</nav>
+				</div> <!--end container -->
+			</header>
+              <div id="main_content">
+                 <section id="banner">
+					<div id="slider">
+						<ul>				
+							<li><img src="images/slider1.jpg" /></li>
+							<li><img src="images/slider2.jpg" /></li>
+							<li><img src="images/slider3.jpg" /></li>
+							<li><img src="images/slider4.jpg" /></li>
+							<li><img src="images/slider5.jpg" /></li>
+							<li><img src="images/slider6.jpg" /></li>
+							
+						</ul>
+					</div> <!-- end slider -->
+				</section>
+				<div id="video_container">
+                         
+                                <div id="pretend_video">
+                                <div id="flashContent">
+                                    <script type="text/javascript">
+                                        var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+                                        document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+                                    </script>
+                                </div>
+                                <div id="video_controls">                                        
+                                    <div id="seek_bar"><img src="images/scrubber.png" id="scrubber" /></div>
+                                    <a href="#" id="playandpause"><img src="images/pause.png" /></a>
+                                    <p id="seek_time">-:-- /<p id="duration">-:--</p>
+                                    <a href="#" id="record"><img src="images/record.png" /></a>
+                                    <img src="images/microphone.png" id="audio_sources" />
+                                    <img src="images/seperator.png" id="seperator" />
+                                    <img src="images/camera.png" id="video_sources" />
+                                    
+                                    <div id="volume_bar">
+                                            <img src="images/vol_down.png" />                     
+                                            <div id="volume">
+                                                    <a href="#"><img src="images/vol_scrubber.png" /></a>
+                                            </div>                                            
+                                            <img src="images/vol_up.png" />
+                                    </div>
+                                    
+                                 </div>
+                                <div id="sources_container">
+                            </div>
+                            </div>
+                        
+                   
+                 </div>
+
+         </div>
+         <footer>
+                 <p>Copyright 2013 &copy; Lyteia 'Lyte' Kitchen</p>
+         </footer>
+         
+         <!-- Slider JS -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/easySlider1.7.js"></script>
+		<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-44110637-1',); ga('send', 'pageview');
+		</script>
+     
+ </body>
 </html>
