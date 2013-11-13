@@ -328,7 +328,6 @@ div#video_controls #pp {
 }
 
 div#video_controls p {
-	color: white;
 	font: 16px;
 	margin: 5px 0 0 10px;
 }
@@ -347,32 +346,6 @@ div#video_controls #record {
 
 div#video_controls #audio_src {
 	margin: 5px 3px 0 150px;
-}
-
-div#sources_container {
-	position: relative;
-	background: black;
-	padding-top: 5px;
-	height: 30px;
-	float: left;
-	width: 100%;
-	display: none;
-}
-
-div#sources_container ul {
-	left: 20px;
-	position: absolute;
-	color: white;
-	font: 16px Arial;
-}
-
-div#sources_container ul li {
-	float: left;
-	padding: 0 5px;
-}
-
-div#sources_container ul li a {
-	color: white;
 }
 
 
