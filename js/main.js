@@ -51,7 +51,7 @@ var seekTime = function(time) {
 	
 	$("#scrubber").css("left", Math.floor(position_percentage * $("#seek_bar").width()));
 }
-
+/*http://www.w3schools.com/jquery/event_mousedown.asp */
 $("#seek_bar").mousedown(function(e){	
 	var left = e.pageX - $(this).offset().left; 
 	var perc = left / $("#seek_bar").width();
