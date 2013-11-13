@@ -22,14 +22,12 @@ Nav Text Hover Gold: #bea322
 ? Footer
 ? Fixes
 
-
 ----------------------------------------------------------------------------------------------------*/
 
 
 /* ---------------------------------------------------------------------------------------------------
 		? General
 ---------------------------------------------------------------------------------------------------*/
-
 
 html,body,div,form,fieldset,legend,label,h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,figure,figcaption{
 	margin: 0;
@@ -109,7 +107,6 @@ nav li{
 header a:hover, nav a:hover{
 	color: #bea322;
 }
-
 
 /* ---------------------------------------------------------------------------------------------------
 		? Header Icons
@@ -215,7 +212,6 @@ ul#icons li a#insta:hover{
 	text-align: center;
 }
 
-
 /* ---------------------------------------------------------------------------------------------------
 		? Banner 
 ---------------------------------------------------------------------------------------------------*/
@@ -292,15 +288,128 @@ section#banner{
 	background: url(../images/lk_right_arrow_hover.png) no-repeat 0 0;	
 }
 
-
-
-
 /* ---------------------------------------------------------------------------------------------------
 		? Video Styles
 ---------------------------------------------------------------------------------------------------*/
 
+#video{
+	width: 960px;
+}
+
+div#video_controls {
+	float: left;
+	width: 100%;
+	height: 48px;
+	background: #bea322;
+	overflow: hidden;
+}
+
+div#seek_bar {
+	height: 12px;
+	float: left;
+	margin-bottom: 3px;
+	background: url(../images/scrubber_bg.gif) repeat;
+	width: 740px;
+	position: relative;
+	left: 0;
+}
+
+div#seek_bar #scrubber {
+	position: absolute;
+}
+
+div#video_controls a, img, p {
+	float: left;
+}
+
+div#video_controls #pp {
+	width: 10px;
+	margin: 5px 0 0 10px;
+}
+
+div#video_controls p {
+	color: white;
+	font: 16px;
+	margin: 5px 0 0 10px;
+}
+
+div#video_controls p#duration {
+	margin: 5px 0 0 3px;
+}
+
+div#video_controls p:nth-child(5) {
+	margin: 5px 0 0 0;
+}
+
+div#video_controls #record {
+	margin-left: 280px;
+}
+
+div#video_controls #audio_src {
+	margin: 5px 3px 0 150px;
+}
+
+div#sources_container {
+	position: relative;
+	background: black;
+	padding-top: 5px;
+	height: 30px;
+	float: left;
+	width: 100%;
+	display: none;
+}
+
+div#sources_container ul {
+	left: 20px;
+	position: absolute;
+	color: white;
+	font: 16px Arial;
+}
+
+div#sources_container ul li {
+	float: left;
+	padding: 0 5px;
+}
+
+div#sources_container ul li a {
+	color: white;
+}
 
 
+div#video_controls #video_src {
+	margin: 5px 0 0 3px;
+}
+
+div#volume_bar > img:first-child {
+	margin: 5px 4px 0 20px;
+}
+
+div#volume_bar {
+	float: left;
+	margin-top: 3px;
+}
+
+div#volume {
+	float: left;
+	background: red;
+	height: 8px;
+	margin-top: 8px;
+	overflow: hidden;
+	position: relative;
+	width: 100px;
+}
+
+div#volume img {
+	position: absolute;
+	top: -2px;
+	left: -1px;
+}
+
+div#volume_bar img:nth-child(3) {
+	margin: 5px 0 0 5px;
+}
+
+        
 /* ---------------------------------------------------------------------------------------------------
 		? Footer
 ---------------------------------------------------------------------------------------------------*/
@@ -348,7 +457,6 @@ h2{
 	background-color: #A81E22;
 
 }
-
 
 
 

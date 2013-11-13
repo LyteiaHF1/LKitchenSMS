@@ -9,7 +9,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/swfobject.js"></script>
         <script type="text/javascript" src="js/sms_setup.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        
         
         
         <!-- Slider JS -->
@@ -39,15 +39,15 @@
 					</div> <!-- end logo -->
 					<nav>
 						<ul>
-							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#who_we_are">ABOUT US</a></li>
 							<li><a href="#" id="fb_login">SIGN IN</a></li>
 						</ul>
 						<ul id="icons">
-							<li><a id="facebook" href="https://www.facebook.com/HighfashionCarter">Facebook</a></li>
-							<li><a id="youtube" href="http://www.youtube.com/user/HighfasionLyte">Youtube</a></li>
+							<li><a id="facebook" href="https://www.facebook.com/">Facebook</a></li>
+							<li><a id="youtube" href="http://www.youtube.com/">Youtube</a></li>
 							<li><a id="tumblr" href="">Tumblr</a></li>
-							<li><a id="twitter" href="https://twitter.com/MRZDOLLAZ90">Twitter</a></li>
-							<li><a id="insta" href="http://instagram.com/_soleaddict_/#">Instagram</a></li>
+							<li><a id="twitter" href="https://twitter.com/">Twitter</a></li>
+							<li><a id="insta" href="http://instagram.com/">Instagram</a></li>
 						</ul>	
 					</nav>
 				</div> <!--end container -->
@@ -66,25 +66,41 @@
 						</ul>
 					</div> <!-- end slider -->
 				</section>
+				  						<div class="content-spacer">
                                                 <div id="video">
-                                                        <div style="width: 640px; height: 480px; margin: 0 auto;">
+                                                        <div style="width: 740px; height: 480px; margin: 0 auto;">
                                                         <div id="flashContent">
                                                             <script type="text/javascript">
                                                                 var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
                                                                 document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
                                                             </script>
                                                         </div>
-                                                    </div>
-
-                                                </div>
-                                               
-                 
+                                                        <div id="video_controls">			        	
+			            <div id="seek_bar"><img src="images/scrubber.png" id="scrubber" /></div>
+		            	<a href="#" id="pp"><img src="images/pause.png" /></a>
+		            	<p id="seek_time">0:00<p id="duration">-:--</p>
+		            	<a href="#" id="record"><img src="images/record.png" /></a>
+		            	<img src="images/microphone.png" id="audio_src" />
+		            	<img src="images/camera.png" id="video_src" />
+		            	
+		            	<div id="volume_bar">
+		            		<img src="images/vol_down.png" />		     
+		            		<div id="volume">
+		            			<a href="#"><img src="images/vol_scrubber.png" /></a>
+		            		</div>		            		
+		            		<img src="images/vol_up.png" />
+		            	</div>
+		            	
+			         </div>
+			        <div id="sources_container">
+		            </div>
+			    </div>
                  
                  <section id="who_we_are">
 					<img src="images/whoweare.png">
 					
 					<p>
-						Heavy Rotation Is The Best Way To Master The Mix ONLINE ! Why Not Master The Art Of Mixing,Spinning And Everything In Between From The Comfort Of Your Own Home!
+						Heavy Rotation Is The Best Way To Master The Mix ONLINE ! Why Not Master The Art Of Mixing,Spinning And Everything In Between From The Comfort Of Your Own Home!Learn To Be The Best DJ 
 					</p>
 				</section>
 
@@ -101,7 +117,7 @@
 				            <input type="text" name="cf_color" placeholder="Username"><br>
 				          	<input type="submit" value="Send">
 				        </form>
-				        <h2>Chat With Us</h2>
+				        <h2 id="chat_head">Chat With Us</h2>
 				        <div id="chat_room_container">
 					     <div id="chat_room_wrapper">
 						   <div id="comment_controls">
@@ -121,9 +137,7 @@
          <!-- Slider JS -->
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/easySlider1.7.js"></script>
-		<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-44110637-1',); ga('send', 'pageview');
-		</script>
+		<script type="text/javascript" src="js/main.js"></script>
      
  </body>
 </html>
