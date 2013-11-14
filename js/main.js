@@ -18,6 +18,10 @@ var d_mic = 0;
 
 var position_percentage = 0;
 
+//Fire Base for chat
+var myDataRef = new Firebase("https://heavyrotation.firebaseio.com/");
+var currentUser = {};
+
 /*flash ready function coonnect to server*/
 var flashReady = function(){
 	flash.connect("rtmp://localhost/SMSServer");
@@ -110,5 +114,61 @@ $("#record").click(function(e){
 	e.preventDefault();
 	return false;
 });
+
+$("#audio_src").mouseenter(function(){
+	$("#sources_container").html(
+		"<ul>" +
+			audioSourcesHTML +
+		"</ul>"
+	).fadeIn();
+		
+	$("#sources_container").find("ul li a").each(function(index){
+		$(this).on("click", function(e){
+			d_mic = index;
+			e.preventDefault();
+			return false;
+		});
+	});
+});
+
+$("#sources_container").mouseleave(function(){
+		$(this).fadeOut();
+});
+
+$("#video_src").mouseenter(function(){
+	$("#sources_container").html(
+		"<ul>" +
+			videoSourcesHTML +
+		 "</ul>"
+	).fadeIn();
+	
+	$("#sources_container").find("ul li a").each(function(index){
+		$(this).on("click", function(e){
+			d_cam = index;
+			e.preventDefault();
+			return false;
+		});
+	});
+});
+	
+	
+var setupSources = function(){
+	for (var i = 0, max = cameras.length; i<max; i++) {
+		videoSourcesHTML += "<li><a href='#'>" + cameras[i] + "</a></li>";
+	};
+	
+	for (var i = 0, max = audio.length; i<max; i++) {
+		audioSourcesHTML += "<li><a href='#'>" + audio[i] + "</a></li>";
+	};
+	
+	$(videoSourcesHTML).find("li").each(function(index){
+		console.log(index);
+	});
+}
+
+
+
+
+
 
 
