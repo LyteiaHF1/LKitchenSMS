@@ -19,7 +19,7 @@ var d_mic = 0;
 var position_percentage = 0;
 
 //Fire Base for chat
-var myDataRef = new Firebase("https://heavyrotation.firebaseio.com/");
+var myTest = new Firebase("https://heavyrotation.firebaseio.com/");
 var currentUser = {};
 
 /*flash ready function coonnect to server*/
@@ -115,56 +115,56 @@ $("#record").click(function(e){
 	return false;
 });
 
-$("#audio_src").mouseenter(function(){
-	$("#sources_container").html(
-		"<ul>" +
-			audioSourcesHTML +
-		"</ul>"
-	).fadeIn();
-		
-	$("#sources_container").find("ul li a").each(function(index){
-		$(this).on("click", function(e){
-			d_mic = index;
-			e.preventDefault();
-			return false;
-		});
-	});
+//Login & Commenting 
+$("#fb_login").click(function(e){
+        if ($(this).html() == "SIGN IN") {
+                auth.login("facebook");
+        } else {
+                auth.logout();
+                currentUser = {};
+                $("#comment_controls").fadeOut();
+                $(this).html("SIGN IN");
+        }
 });
 
-$("#sources_container").mouseleave(function(){
-		$(this).fadeOut();
+var auth = new FirebaseSimpleLogin(myTest, function(error, user){
+        if (user) {
+                $("#fb_login").html("LOG OUT");
+                user["profilePic"] = "http://graph.facebook.com/" + user["username"] + "/picture";
+                currentUser = user;
+                $("#comment_controls").hide().fadeIn();
+        } else if (error) {
+                alert("Sign-in failed");
+        }
 });
 
-$("#video_src").mouseenter(function(){
-	$("#sources_container").html(
-		"<ul>" +
-			videoSourcesHTML +
-		 "</ul>"
-	).fadeIn();
-	
-	$("#sources_container").find("ul li a").each(function(index){
-		$(this).on("click", function(e){
-			d_cam = index;
-			e.preventDefault();
-			return false;
-		});
-	});
+$('#submit_comment').click(function(e){
+      var name = currentUser["displayName"];
+      var text = $('#comment_text').val();
+      var pic = currentUser["profilePic"];
+      var d = new Date();
+      var month = d.getMonth()+1;
+      var day = d.getDate();
+      var date = month + "/" + day;
+      
+      if ($("#comment_text").val()) {
+               myTest.push({name: name, text: text, pic: pic, date: date});
+               $('#comment_text').val('');
+      } else {
+              alert("Please enter a comment");
+      }
+     
 });
-	
-	
-var setupSources = function(){
-	for (var i = 0, max = cameras.length; i<max; i++) {
-		videoSourcesHTML += "<li><a href='#'>" + cameras[i] + "</a></li>";
-	};
-	
-	for (var i = 0, max = audio.length; i<max; i++) {
-		audioSourcesHTML += "<li><a href='#'>" + audio[i] + "</a></li>";
-	};
-	
-	$(videoSourcesHTML).find("li").each(function(index){
-		console.log(index);
-	});
-}
+
+myTest.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        showChatMessage(message.name, message.text, message.pic, message.date);
+});
+
+function showChatMessage(name, text, pic, date) {
+                var commentHTML = "<div class='comment'><div class='header'><img class='test_image' src='" + pic + "' width='25' height='25' /><h3>" + name + "</h3><h4>" + date + "</h4></div><p>" + text + "</p></div>";
+                $("#chat_room_wrapper").append(commentHTML);
+};
 
 
 

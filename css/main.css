@@ -396,7 +396,7 @@ footer{
 	overflow: hidden;
 }
 
-h2{
+h2, h3{
 	color: #bea322;
 	padding-bottom: 8px;
 }
@@ -431,6 +431,18 @@ h2{
 
 }
 
+#chat_room_container{
+	display: block;
+	width: 840px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+
+#chat_room_wrapper{
+	background: #2f2f2f;
+	color: #f1f1f1;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------------
@@ -442,4 +454,3 @@ a img { border: 0; }
 img { max-width: 100%; }
 
 .clear_fix { clear: both; }
-
